@@ -3,14 +3,14 @@
                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                  >
   <DialogSettings xsi:type="WorkflowEditorSettings">
-    <Visible>true</Visible>
+    <Visible>false</Visible>
     <Location>
-      <X>54</X>
-      <Y>520</Y>
+      <X>110</X>
+      <Y>411</Y>
     </Location>
     <Size>
-      <Width>543</Width>
-      <Height>677</Height>
+      <Width>814</Width>
+      <Height>610</Height>
     </Size>
     <WindowState>Normal</WindowState>
     <VisualizerTypeName>Bonsai.Vision.Design.IplImageVisualizer</VisualizerTypeName>
@@ -20,12 +20,12 @@
     <EditorDialogSettings>
       <Visible>false</Visible>
       <Location>
-        <X>-148</X>
-        <Y>437</Y>
+        <X>106</X>
+        <Y>171</Y>
       </Location>
       <Size>
-        <Width>750</Width>
-        <Height>367</Height>
+        <Width>653</Width>
+        <Height>446</Height>
       </Size>
       <WindowState>Normal</WindowState>
     </EditorDialogSettings>
@@ -33,8 +33,8 @@
   <DialogSettings>
     <Visible>true</Visible>
     <Location>
-      <X>601</X>
-      <Y>281</Y>
+      <X>452</X>
+      <Y>418</Y>
     </Location>
     <Size>
       <Width>624</Width>
@@ -373,8 +373,8 @@
   <DialogSettings>
     <Visible>true</Visible>
     <Location>
-      <X>154</X>
-      <Y>800</Y>
+      <X>869</X>
+      <Y>813</Y>
     </Location>
     <Size>
       <Width>686</Width>
@@ -421,10 +421,6 @@
       <Height>319</Height>
     </Size>
     <WindowState>Normal</WindowState>
-    <VisualizerTypeName>Bonsai.Design.ObjectTextVisualizer</VisualizerTypeName>
-    <VisualizerSettings>
-      <ObjectTextVisualizer />
-    </VisualizerSettings>
   </DialogSettings>
   <DialogSettings>
     <Visible>false</Visible>

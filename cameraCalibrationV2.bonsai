@@ -33,14 +33,14 @@
             </Expression>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="dsp:RunningAverage">
-                <dsp:Alpha>0.2</dsp:Alpha>
+                <dsp:Alpha>0.3</dsp:Alpha>
               </Combinator>
             </Expression>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="cv:BackgroundSubtraction">
-                <cv:BackgroundFrames>10</cv:BackgroundFrames>
-                <cv:AdaptationRate>0.01</cv:AdaptationRate>
-                <cv:ThresholdValue>91</cv:ThresholdValue>
+                <cv:BackgroundFrames>50</cv:BackgroundFrames>
+                <cv:AdaptationRate>0.05</cv:AdaptationRate>
+                <cv:ThresholdValue>83</cv:ThresholdValue>
                 <cv:ThresholdType>Truncate</cv:ThresholdType>
                 <cv:SubtractionMethod>Dark</cv:SubtractionMethod>
               </Combinator>
@@ -72,7 +72,7 @@
             <cv:X>0</cv:X>
             <cv:Y>0</cv:Y>
           </cv:Offset>
-          <cv:MinArea>50</cv:MinArea>
+          <cv:MinArea>200</cv:MinArea>
           <cv:MaxArea xsi:nil="true" />
         </Combinator>
       </Expression>
@@ -124,7 +124,7 @@ def process(value):
               <Property Name="FileName" />
             </Expression>
             <Expression xsi:type="io:CsvReader">
-              <io:FileName>E:\00_bonsai_ffmpeg_out\ROIdef2025-01-27T10_52_11.csv</io:FileName>
+              <io:FileName>E:\00_bonsai_ffmpeg_out\ROIdef2025-01-28T12_12_59.csv</io:FileName>
               <io:ScanPattern>%i,%i,%i,%i,%i,%i</io:ScanPattern>
               <io:SkipRows>0</io:SkipRows>
             </Expression>
@@ -145,11 +145,11 @@ def process(value):
 def process(value):
 
   #keep=[0,2,6,8]
-  #keep = [8,12,22,26]
+  keep = [8,12,22,26]
   #keep = [1,5,28,34]
 
   #keep = [0,4,10,14] #15 dish configuration
-  keep = [6,8,11,13] #alternative 15 dish configuration
+  #keep = [6,8,11,13] #alternative 15 dish configuration
 
   return [value[i] for i in keep]</ipy:Script>
       </Expression>
@@ -295,8 +295,8 @@ clr.AddReference("OpenCV.Net")
 from System.Collections.Generic import IList
 from OpenCV.Net import CV, Point2f, Mat,Depth
 
-sys.path.append('C:\\Users\\Experimenter\\Documents\\bonsai_embeddedbehavior\\calibrate\\lib')
-import test
+sys.path.append('C:\\Users\\Experimenter\\Documents\\bonsai_cameraCalibration\\python')
+import prepVariables as test
 #hello Deeksha
 
 #placeholder initial transform used until first 4 dots are detected
@@ -352,7 +352,7 @@ def process(value):
       </Expression>
       <Expression xsi:type="Combinator">
         <Combinator xsi:type="BooleanProperty">
-          <Value>false</Value>
+          <Value>true</Value>
         </Combinator>
       </Expression>
       <Expression xsi:type="Combinator">
